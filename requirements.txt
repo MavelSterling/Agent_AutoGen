@@ -1,0 +1,11 @@
+autogen-agentchat
+autogen-ext[openai,azure]
+fastapi
+uvicorn
+pydantic
+pytest
+opentelemetry-api
+PyYAML
+openpyxl
+requests
+beautifulsoup4

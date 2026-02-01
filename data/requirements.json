@@ -1,0 +1,50 @@
+{
+  "project_name": "Arquitecto de Solucion",
+  "domain": "Cloud/AI",
+  "cloud_provider": "Azure",
+  "functional_requirements": [
+    "Generar propuesta de arquitectura",
+    "Entregar diagrama y backlog tecnico"
+  ],
+  "non_functional_requirements": [
+    "Seguridad",
+    "Observabilidad"
+  ],
+  "constraints": [
+    "Sin API Gateway"
+  ],
+  "data_sources": [
+    "Repositorio interno",
+    "Documentos PDF"
+  ],
+  "resources": [
+    "Container Registry",
+    "Container Instance",
+    "Storage Account",
+    "Cosmos DB",
+    "Key Vault",
+    "Application Insights",
+    "Log Analytics",
+    "Monitor",
+    "Service Bus",
+    "Event Grid",
+    "Event Hubs",
+    "API Management",
+    "API Gateway",
+    "Azure AI Search",
+    "Container Apps",
+    "Azure Web Apps",
+    "Azure bot services",
+    "Azure AI foundry"
+  ],
+  "traffic_profile": "Picos de 50 rps",
+  "regions": [
+    "us-east-1"
+  ],
+  "compliance": [
+    "ISO27001"
+  ],
+  "assumptions": [
+    "Acceso a modelos LLM"
+  ]
+}

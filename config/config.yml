@@ -1,0 +1,49 @@
+app:
+  name: "Arquitecto de Solucion"
+  environment: "local"
+  log_level: "INFO"
+
+llm:
+  enabled: false
+  provider: "openai" # openai | azure
+  model: "gpt-4o-mini"
+  api_key_env: "OPENAI_API_KEY"
+  api_base: ""
+  azure:
+    endpoint: ""
+    deployment_name: ""
+    api_version: "2024-02-01"
+    api_key_env: "AZURE_OPENAI_API_KEY"
+
+cost:
+  # Proveedor para web scraping de precios: azure | aws | gcp | vacio para no usar
+  scrape_provider: ""
+
+paths:
+  # Directorio donde se escribe la salida (architecture, adr, backlog, risk, cost)
+  output_dir: "data"
+
+execution:
+  timeouts_seconds:
+    ingest: 10
+    generate: 60
+    persist: 10
+  retries:
+    max_attempts: 3
+    backoff_seconds: 2
+  max_concurrency: 4
+
+features:
+  enable_observability: true
+
+observability:
+  metrics_endpoint: "http://localhost:4318"
+  tracing_sampling: 0.2
+
+storage:
+  backend: "local"
+  bucket_name: "solution-artifacts"
+
+vector_index:
+  provider: "local"
+  top_k: 5
